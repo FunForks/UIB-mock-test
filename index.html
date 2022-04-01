@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <header>
+    <h1>The 65th Square Chess Club</h1>
+  </header>
+
+  <main>
+    <p>Welcome to the 65th Square Chess Club, based at 65 65th Street, Kingston.</p>
+    
+    <footer>
+      <span>&copy;65th Square 2022</span>
+    </footer>
+
+    <div class="bar">
+      <p>As far as we know, the 65th Square Chess Club is the only chess club in the world with a bar. Here you can always find a partner for a game and enjoy a great cocktail named after the world's finest chess players.</p>
+      <!-- <img
+        src="images/cocktail-shaker.jpg"
+      > -->
+    </div>
+    
+    <p>Here's a selection of our classics:</p>
+    
+    <div class="cocktails">
+      <div class="row">
+        <div class="cocktail polgar">
+          <h3>Polgar</h3>
+          <img src="images/polgar.jpg">
+          <ul>
+            <li>Tequila</li>
+            <li>Luxardo red bitter</li>
+            <li>Served on the rocks with a cherry and a slice of lime</li>
+          </ul>
+        </div>
+        <div class="cocktail fischer">
+          <h3>Fischer</h3>
+          <img src="images/fischer.jpg">
+          <ul>
+            <li>2 ounces Malibu</li>
+            <li>1/2 ounce orange liqueur or triple sec</li>
+            <li>1/2 ounce lemon juice, freshly squeezed</li>
+        <li>1 egg white</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cocktail capablanca">
+          <h3>Capablanca</h3>
+          <img src="images/capablanca.jpg">
+          <ul>
+            <li>2/3 glass full of ice</li>
+            <li>2 ounces Brandy de Jerez</li>
+            <li>1/4 ounce amaretto</li>
+          </ul>
+        </div>
+        <div class="cocktail spassky">
+          <h3>Spassky</h3>
+          <img src="images/spassky.jpg">
+          <ul>
+            <li>Vodka</li>
+            <li>White curacao or cointreau</li>
+            <li>Lime juice</li>
+            <li>Decorated with a mint cherry and sugar on a glass rim</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="thirsty-thursday">
+      <h2>Thirsty Thursday Offer</h2>
+      
+      <p>Every Thursday, we offer a free cocktail of your choice to the first 65 players who can solve our weekly chess puzzle. Fill in the form below and click submit. If you are one of the 65 lucky winners, we'll send you a token that you can redeem this coming Thursday.</p>
+      
+      <table class="chess-board">
+        <caption>"Philidor's Mate" - white to play and mate in 2 moves</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+            <th>e</th>
+            <th>f</th>
+            <th>g</th>
+            <th>h</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">8</th>
+            <td>♚</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>♜</td>
+            <th scope="row">8</th>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>♟</td>
+            <td>♟</td>
+            <td></td>
+            <td>♙</td>
+            <td></td>
+            <td>♞</td>
+            <td></td>
+            <td></td>
+            <th scope="row">7</th>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>♘</td>
+            <td></td>
+            <td>♞</td>
+            <td>♕</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th scope="row">6</th>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>♗</td>
+            <td></td>
+            <td>♝</td>
+            <td></td>
+            <th scope="row">5</th>
+          </tr>
+        </tbody>
+      </table>
+      <form action="">
+        <h2>Entry form</h2>
+        <p>To enter the competition, send us your name, email address and the moves that will win for White.</p>
+        <label for="name">
+          <p>Name: </p>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="your name goes here"
+          >
+        </label>
+        <label for="email">
+          <p>Email: </p>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="your.email@goes.here"
+          >
+        </label>
+        <label for="moves">
+          <p>Moves in algebraic notation:</p>
+          <textarea
+            id="moves"
+            placeholder="your moves go here"
+          ></textarea>
+        </label>
+        <button>Win a Free Cocktail</button>
+      </form>
+    </div>
+  </main>
+  
+</body>
+</html>

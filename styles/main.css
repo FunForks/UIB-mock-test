@@ -1,0 +1,221 @@
+:root {
+  font-size: 16px;
+  --border: 1px solid gold;
+  --image-width: 720px;
+  --h1-vw-size: 12vw;
+  --top-padding: calc(var(--h1-vw-size) * 2 + 2em);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+main {
+  background-color: white;
+  max-width: var(--image-width);
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+h1 {
+  background-image:
+    linear-gradient(to bottom, #fff8, #fff8),
+    url(../images/chess_set_16.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  font-size: var(--h1-vw-size);
+  text-align: center;
+  margin: 0 auto;
+}
+
+p {
+  padding: 1em;
+  margin: 0;
+}
+
+main {
+  padding-top: var(--top-padding);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+}
+
+.bar img {
+  width: 20%;
+  border-radius: 100%;
+}
+
+.cocktail {
+  position: relative;
+  width: 100%;
+  text-shadow: 1px 1px #fff8, -1px -1px #fff8;
+}
+
+.cocktail img {
+  width: 100%;
+  vertical-align: top;
+}
+
+h3, ul {
+  position: absolute;
+}
+
+h3 {
+  text-align: center;
+  width: 100%;
+}
+
+ul {
+  bottom: 0;
+  padding: 0 3rem;
+}
+
+.fischer,
+.spassky {
+  color: white;
+  text-shadow: 1px 1px #0008, -1px -1px #0008;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.thirsty-thursday {
+  padding: 1em;
+  background-color: cornsilk;
+}
+
+table {
+  border-collapse: collapse;
+  color: #000000;
+  caption-side: bottom;
+  margin: 0 auto;
+  font-size: 4vw;
+}
+
+th {
+  background-color: bisque;
+  width: 1em;
+}
+
+td {
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+  font-size: 2em;
+}
+
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even) td:nth-child(even){
+    background-color: wheat;
+}
+
+table.chess-board,
+tr:first-child td, 
+tr:first-child td {
+    border-top: var(--border);
+}
+
+table :first-of-type {
+  border-left: var(--border);
+}
+
+table :last-of-type {
+  border-right: var(--border);
+}
+
+table.chess-board caption {
+  border: none;
+  text-decoration: underline;
+  margin-top: 0.5em;
+}
+
+form {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 1em;
+  padding: 0.5em;
+}
+
+h2 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+label {
+  display: block;
+}
+
+form p {
+  padding: 0;
+  margin: 1em 0 0;
+}
+
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 1px solid red
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+@media (min-width: 400px) {
+  table {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 450px) {
+  .cocktail {
+    width: 50%;
+  }
+  .row {
+    flex-direction: row;
+  }
+
+  .capablanca {
+    order: 1;
+  }
+}
+
+@media (min-width: 720px) {
+  footer, h1 {  
+    width: var(--image-width);
+  }
+
+  h1 {
+    font-size: 86px;
+  }
+
+  main {
+    padding-top: calc(172px + 2em);
+  }
+}
