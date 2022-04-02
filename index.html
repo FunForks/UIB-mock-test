@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/3c09bcb51a.js"></script>
+
   <link rel="stylesheet" href="styles/main.css">
-  <title>Document</title>
+  <title>Chess Club</title>
 </head>
 <body>
 
@@ -18,6 +20,11 @@
     
     <footer>
       <span>&copy;65th Square 2022</span>
+      <ul class="icon-list">
+        <li class="icon"><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li class="icon"><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li class="icon"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
     </footer>
 
     <div class="bar">
@@ -81,7 +88,7 @@
       <p>Every Thursday, we offer a free cocktail of your choice to the first 65 players who can solve our weekly chess puzzle. Fill in the form below and click submit. If you are one of the 65 lucky winners, we'll send you a token that you can redeem this coming Thursday.</p>
       
       <table class="chess-board">
-        <caption>"Philidor's Mate" - white to play and mate in 2 moves</caption>
+        <caption>White to play and mate in 2 moves</caption>
         <thead>
           <tr>
             <th></th>
@@ -157,23 +164,40 @@
             type="text"
             name="name"
             placeholder="your name goes here"
+            required
+            minlength="2"
           >
+          <span>*</span>
         </label>
         <label for="email">
           <p>Email: </p>
           <input
             id="email"
-            type="text"
+            type="email"
             name="email"
             placeholder="your.email@goes.here"
+            required
           >
+          <span>*</span>
         </label>
         <label for="moves">
           <p>Moves in algebraic notation:</p>
           <textarea
             id="moves"
             placeholder="your moves go here"
+            required
+            minlength="12"
           ></textarea>
+          <span>*</span>
+        </label>
+        <label for="mate">
+          <h4>Bonus to win a cocktail for one of your mates</h4>
+          <p>Give the name of this type of mate:</p>
+          <input
+            id="mate"
+            type="text"
+            name="mate"
+          >
         </label>
         <button>Win a Free Cocktail</button>
       </form>

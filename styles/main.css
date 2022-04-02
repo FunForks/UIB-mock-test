@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  --border: 1px solid gold;
+  --border: 1px solid peru;
   --image-width: 720px;
   --h1-vw-size: 12vw;
   --top-padding: calc(var(--h1-vw-size) * 2 + 2em);
@@ -43,7 +43,7 @@ h1 {
 }
 
 p {
-  padding: 1em;
+  padding: 1rem;
   margin: 0;
 }
 
@@ -72,7 +72,7 @@ main {
   vertical-align: top;
 }
 
-h3, ul {
+h3, .cocktail ul {
   position: absolute;
 }
 
@@ -99,22 +99,21 @@ ul {
   justify-content: center;
 }
 
-.thirsty-thursday {
-  padding: 1em;
-  background-color: cornsilk;
-}
-
 table {
+  table-layout: fixed;
   border-collapse: collapse;
   color: #000000;
   caption-side: bottom;
   margin: 0 auto;
-  font-size: 4vw;
+  font-size: 5vw;
 }
 
 th {
   background-color: bisque;
+  font-size:0.75em;
   width: 1em;
+  line-height: 1em;
+  font-weight: normal;
 }
 
 td {
@@ -151,9 +150,9 @@ table.chess-board caption {
 
 form {
   width: 100%;
-  max-width: 360px;
-  margin: 0 auto 1em;
-  padding: 0.5em;
+  margin: 1em auto;
+  padding: 0.5rem;
+  background-color: bisque;
 }
 
 h2 {
@@ -163,11 +162,12 @@ h2 {
 
 label {
   display: block;
+  position: relative;
 }
 
 form p {
   padding: 0;
-  margin: 1em 0 0;
+  margin: 1rem 0 0;
 }
 
 input, textarea {
@@ -176,7 +176,32 @@ input, textarea {
 }
 
 :focus {
-  outline: 1px solid red
+  outline: 2px solid cyan
+}
+
+input:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid {
+  border: 2px dashed peru;
+}
+
+:invalid:focus {
+  background-color: #fee;
+}
+
+label span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: peru;
+  display: none;
+}
+
+:invalid ~ span {
+  display: inline;
+}
+
+button {
+  margin-top: 1rem;
 }
 
 footer {
@@ -185,11 +210,39 @@ footer {
   bottom: 0;
   background-color: #fff;
   z-index: 1;
+  height: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media (min-width: 400px) {
-  table {
-    font-size: 1rem;
+footer ul {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.6em;
+}
+
+footer li {
+  margin: 0 3vw
+}
+
+footer a {
+  color: sienna
+}
+
+footer a:hover {
+  color: maroon;
+}
+
+footer a:visited {
+  color: peru;
+}
+
+@media (min-width: 240px) {
+  footer ul {
+    display: flex;
   }
 }
 
@@ -197,12 +250,21 @@ footer {
   .cocktail {
     width: 50%;
   }
+
   .row {
     flex-direction: row;
   }
 
   .capablanca {
     order: 1;
+  }
+
+  table {
+    font-size: 1.35rem
+  }
+
+  form {
+    width: 28rem;
   }
 }
 
@@ -216,6 +278,16 @@ footer {
   }
 
   main {
-    padding-top: calc(172px + 2em);
+    padding-top: calc(172px + 2rem);
+  }
+}
+
+@media (max-height: 720px) {
+  header {
+    position: relative;
+  }
+
+  main {
+    padding-top: 0;
   }
 }
