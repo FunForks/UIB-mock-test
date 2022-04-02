@@ -56,3 +56,5 @@ https://www.pxfuel.com/en/free-photo-ocxkh
 https://commons.wikimedia.org/wiki/File:White_Lady_Cocktail.jpg
 
 https://pixabay.com/ru/photos/девушка-молодой-женщина-красота-1064665/
+
+https://commons.wikimedia.org/wiki/File:Bartender_preparing_a_blue_blazer_cocktail02.jpg

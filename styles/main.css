@@ -32,11 +32,11 @@ header {
 h1 {
   background-image:
     linear-gradient(to bottom, #fff8, #fff8),
-    url(../images/chess_set_16.png);
+    url(../images/chess_set.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #fff;
+  background-color: white;
   font-size: var(--h1-vw-size);
   text-align: center;
   margin: 0 auto;
@@ -53,12 +53,7 @@ main {
 
 .bar {
   display: flex;
-  align-items: center;
-}
-
-.bar img {
-  width: 20%;
-  border-radius: 100%;
+  justify-content: center;
 }
 
 .cocktail {
@@ -102,7 +97,6 @@ ul {
 table {
   table-layout: fixed;
   border-collapse: collapse;
-  color: #000000;
   caption-side: bottom;
   margin: 0 auto;
   font-size: 5vw;
@@ -129,7 +123,7 @@ tr:nth-child(even) td:nth-child(even){
 }
 
 table.chess-board,
-tr:first-child td, 
+tr:first-child td,
 tr:first-child td {
     border-top: var(--border);
 }
@@ -152,6 +146,7 @@ form {
   width: 100%;
   margin: 1em auto;
   padding: 0.5rem;
+  padding-bottom: 2rem;
   background-color: bisque;
 }
 
@@ -176,7 +171,7 @@ input, textarea {
 }
 
 :focus {
-  outline: 2px solid cyan
+  outline: 2px solid maroon;
 }
 
 input:not(:placeholder-shown):invalid,
@@ -185,7 +180,7 @@ textarea:not(:placeholder-shown):invalid {
 }
 
 :invalid:focus {
-  background-color: #fee;
+  background-color: linen;
 }
 
 label span {
@@ -208,7 +203,7 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-  background-color: #fff;
+  background-color: white;
   z-index: 1;
   height: 2em;
   display: flex;
@@ -247,12 +242,26 @@ footer a:visited {
 }
 
 @media (min-width: 450px) {
-  .cocktail {
-    width: 50%;
+  .bar:after {
+    content: "";
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20%;
+
+    background-image: url(../images/bartender.jpg);
+    background-repeat: no-repeat;
+    background-size:  contain;
+    background-position: right;
+    margin-right: 1em;
   }
 
-  .row {
-    flex-direction: row;
+  .cocktails {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cocktail {
+    width: 50%;
   }
 
   .capablanca {
@@ -269,7 +278,7 @@ footer a:visited {
 }
 
 @media (min-width: 720px) {
-  footer, h1 {  
+  footer, h1 {
     width: var(--image-width);
   }
 
