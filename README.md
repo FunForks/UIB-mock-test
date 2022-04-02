@@ -22,13 +22,14 @@ For information, the colours used in the demo are:
 ## Header, main and footer
 
 1. Use the chess_set.jpg image as a background for the header.
-2. Make the header always visible at the top, unless the height of the viewport is less than 720px, in which case the header should scroll with the page.
-3. Move the footer to the end.
-4. Make the footer 2rem high.
-5. Make the footer visible at all times.
-6. Add an unordered list to the footer, add three list items to it.
-7. Each list item should have an anchor link nested inside. Only add an "#" symbol to the `href`.
-8. Find three social media icons to place inside the anchor links, e.g. instagram, linked in, twitter.
+2. Use a linear gradient to make the background image lighter.
+3. Make the header always visible at the top, unless the height of the viewport is less than 720px, in which case the header should scroll with the page.
+4. Move the footer to the end.
+5. Make the footer 2rem high.
+6. Make the footer visible at all times.
+7. Add an unordered list to the footer, add three list items to it.
+8. Each list item should have an anchor link nested inside. Only add an "#" symbol to the `href`.
+9. Find three social media icons to place inside the anchor links, e.g. instagram, linked in, twitter.
 
 ## Cocktails
 4. For the four square cocktail images:
